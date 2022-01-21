@@ -20,14 +20,14 @@
             <div class="slide first">
                 <img src="2022GT3.jpg" alt="Porsche GT3">
             </div>
-            <div class="slide">    
-                <img src="2022GT4RED.jpg" alt="Porsche GT4">
-            </div>
             <div class="slide">
                 <img src="gt4interior.jpg" alt="GT4 interior">
             </div>
             <div class="slide">
                 <img src="tollbrothershome1.jpg" alt="toll brothers home exterior">
+            </div>
+            <div class="slide">    
+                <img src="2022GT4RED.jpg" alt="Porsche GT4">
             </div>
             <div class="slide">
                 <img src="tollbrothershome2.jpg" alt="toll brothers home exterior">
@@ -60,6 +60,16 @@
             </div>
         </div>
     </div>
-    
+    <script type="text/javascript">
+        let counter = 1;
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if(counter > 6){
+                counter = 1;
+            }
+        }, 5000);
+     
+    </script>
 </body>
 </html>
