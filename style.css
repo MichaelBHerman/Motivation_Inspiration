@@ -1,4 +1,5 @@
 body {
+    font-family: 'Lobster', cursive;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -7,6 +8,7 @@ body {
     align-items: center;
     background: cornflowerblue
 }
+
 
 .slider {
     width: 800px;

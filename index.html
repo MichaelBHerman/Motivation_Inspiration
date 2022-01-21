@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Motivation</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Gwendolyn:wght@700&family=IBM+Plex+Serif:wght@200;500&family=Lobster&family=Noto+Serif&family=Orbitron:wght@600&family=Public+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h3>"<span id='text'></span>"<br></h3>
-        <h3><br><span id='author'></span></h3>
+        <h2>"<span id='text'></span>"<br></h2>
+        <h2><br><span id='author'></span></h2>
     </div>        
     
     <div class="slider">
@@ -73,7 +76,7 @@
             if(counter > 6){
                 counter = 1;
             }
-        }, 5000);
+        }, 7000);
 
         async function getQuote() {
             let response = await fetch('https://type.fit/api/quotes');
