@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+        <h3>"<span id='text'></span>"
+            <br></h3>
+    
     <div class="slider">
         <div class="slides">
             <input type="radio" name="radio-btn" id="radio1">
@@ -69,7 +73,24 @@
                 counter = 1;
             }
         }, 5000);
-     
+
+        async function getQuote() {
+            let response = await fetch('https://type.fit/api/quotes');
+            let data = await response.json();
+            let {text} = data[result];
+            console.log(text);
+            document.getElementById('text').textContent = text;
+        }
+       
+
+
+        function getRandomNumber(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min);
+        }       
+        let result = getRandomNumber(0, 1600);
+        getQuote();
     </script>
 </body>
 </html>
