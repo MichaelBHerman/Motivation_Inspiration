@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-        <h3>"<span id='text'></span>"
-            <br></h3>
+    <div class="container">
+        <h3>"<span id='text'></span>"<br></h3>
+        <h3><br><span id='author'></span></h3>
+    </div>        
     
     <div class="slider">
         <div class="slides">
@@ -78,8 +79,11 @@
             let response = await fetch('https://type.fit/api/quotes');
             let data = await response.json();
             let {text} = data[result];
+            let {author} = data[result];
             console.log(text);
+            console.log(author);
             document.getElementById('text').textContent = text;
+            document.getElementById('author').textContent = author;
         }
        
 

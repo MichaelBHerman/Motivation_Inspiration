@@ -132,3 +132,8 @@ body {
 #radio7:checked ~ .navigation-auto .auto-btn7{
     background: cornflowerblue;
 }
+
+.container {
+    text-align: center;
+
+}
