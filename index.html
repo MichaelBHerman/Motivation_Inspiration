@@ -24,6 +24,7 @@
             <input type="radio" name="radio-btn" id="radio4">
             <input type="radio" name="radio-btn" id="radio5">
             <input type="radio" name="radio-btn" id="radio6">
+            <input type="radio" name="radio-btn" id="radio7">
 
             <div class="slide first">
                 <img src="2022GT3.jpg" alt="Porsche GT3">
@@ -43,6 +44,9 @@
             <div class="slide">
                 <img src="tollbrothershome3.jpg" alt="toll brothers home exterior">
             </div>
+            <div calss="slide">
+                <img src="sde1.png" alt="SDE full compensation salary">
+            </div>
            
 
             <!--auto navigation-->
@@ -53,6 +57,8 @@
                 <div class="auto-btn4"></div>
                 <div class="auto-btn5"></div>
                 <div class="auto-btn6"></div>
+                <div class="auto-btn7"></div>
+            
                 
             </div>
             </div>
@@ -64,6 +70,7 @@
                 <label for="radio4" class="manual-btn"></label>
                 <label for="radio5" class="manual-btn"></label>
                 <label for="radio6" class="manual-btn"></label>
+                <label for="radio7" class="manual-btn"></label>
                 
             </div>
         </div>
@@ -73,7 +80,7 @@
         setInterval(function(){
             document.getElementById('radio' + counter).checked = true;
             counter++;
-            if(counter > 6){
+            if(counter > 7){
                 counter = 1;
             }
         }, 7000);
