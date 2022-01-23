@@ -75,6 +75,7 @@
             </div>
         </div>
     </div>
+
     <script type="text/javascript">
         let counter = 1;
         setInterval(function(){
@@ -88,8 +89,7 @@
         async function getQuote() {
             let response = await fetch('https://type.fit/api/quotes');
             let data = await response.json();
-            let {text} = data[result];
-            let {author} = data[result];
+            let {text, author} = data[result];
             console.log(text);
             console.log(author);
             document.getElementById('text').textContent = text;
@@ -97,7 +97,7 @@
         }
        
 
-
+        // gets random number to assign to quote from API [RESULT]
         function getRandomNumber(min, max) {
             min = Math.ceil(min);
             max = Math.floor(max);
