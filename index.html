@@ -84,7 +84,7 @@
             if(counter > 6){
                 counter = 1;
             }
-        }, 7000);
+        }, 11000);
 
         async function getQuote() {
             let response = await fetch('https://type.fit/api/quotes');
@@ -95,6 +95,13 @@
             document.getElementById('text').textContent = text;
             document.getElementById('author').textContent = author;
         }
+
+        async function getHoroscope() {
+            let response = await fetch ( "http://horoscope-api.herokuapp.com/horoscope/today/pisces");
+            let data = await response.json();
+            let {horoscope} = data;
+            console.log(horoscope);
+        }
        
 
         // gets random number to assign to quote from API [RESULT]
@@ -104,7 +111,14 @@
         return Math.floor(Math.random() * (max - min + 1) + min);
         }       
         let result = getRandomNumber(0, 1600);
-        getQuote();
+        getQuote().catch(error => {
+            console.log("Error retrieving data!");
+            console.error(error);
+        });
+        getHoroscope().catch(error => {
+            console.log("Error retrieving data from API!");
+            console.error(error);
+        });
     </script>
 </body>
 </html>
